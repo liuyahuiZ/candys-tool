@@ -1,0 +1,19 @@
+
+footer {
+  height: 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0 3rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  span {
+    margin: 0 1rem 0 0;
+    &:hover {
+      color: #888;
+    }
+  }
+  .copyright {
+    float: right;
+  }
+}

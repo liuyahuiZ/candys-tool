@@ -1,0 +1,215 @@
+.modals-enter {
+  opacity: 1;
+  transform: translate3d(-50%,-50%,0) scale(1,1) !important;
+}
+.modals-leave {
+  transform: translate3d(-40%,-40%,0) scale(0.8,0.8) !important;
+  opacity: 0;
+}
+.modalbg-enter {
+  opacity: 1;
+}
+.modalbg-leave {
+  opacity: 0;
+}
+
+
+.carousel-enter {
+  top: -20px;
+  opacity: 0;
+}
+.carousel-enter.carousel-enter-active {
+  top: 0px;
+  opacity: 1;
+  transition: all 400ms ease-in;
+}
+.carousel-leave {
+  top: 0px;
+  opacity: 1;
+}
+.carousel-leave.carousel-leave-active {
+  top: 0px;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.menu-enter {
+  top: 0px;
+  opacity: 1;
+  transition: all 200ms;
+  transform: translate(0px, 0px);
+}
+
+.menu-leave {
+  top: 0px;
+  opacity: 0;
+  transition: all 200ms;
+  transform: translate(0px, 30px);
+}
+
+.menucolspan-enter {
+  top: 0px;
+  opacity: 1;
+  transition: all 300ms;
+  transform: translate(0px, 0px);
+}
+
+.menucolspan-leave {
+  top: 0px;
+  opacity: 0;
+  transition: all 300ms;
+  transform: translate(40px, 0px);
+}
+
+.pop-enter {
+  opacity: 1;
+  transition: all 200ms;
+  transform: translate(0px, 0px);
+}
+
+.pop-leave {
+  opacity: 0;
+  transition: all 200ms;
+  transform: translate(0px, 10px);
+}
+
+
+/* list-part */
+.listTem-enter {
+  top: 0px;
+  opacity: 1;
+  transition: all 500ms;
+  transform: translate(0px, 0px);
+}
+
+.listTem-leave {
+  top: 0px;
+  opacity: 0;
+  transition: all 500ms;
+  transform: translate(50px, 0px);
+}
+
+.listTable-enter {
+  top: 0px;
+  opacity: 1;
+  transition: all 400ms;
+  transform: translate(0px, 0px);
+}
+
+.listTable-leave {
+  top: 0px;
+  opacity: 0;
+  transition: all 400ms;
+  transform: translate(0px, 30px);
+}
+
+.loadPage-enter {
+  top: 0px;
+  opacity: 1;
+  width: 100%;
+  transition: all 500ms;
+}
+
+.loadPage-leave {
+  top: 0px;
+  opacity: 0;
+  width: 80%;
+  transition: all 500ms;
+}
+.megStyle{
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 10px ;
+    left:50%;
+    text-align:left;
+    word-wrap: break-word;
+    word-break: break-all;
+    resize: none;
+    min-width: 200px;
+    max-width: 30rem;
+    height: auto;
+    font-size: 16px;
+    padding: .5rem 1rem;
+    background-color: rgb(235,248,242);
+    transform: translateX(-50%);
+    border: solid 1px;
+    border-color: rgb(167,225,196);
+    border-radius: 5px;
+    color: rgba(0,0,0,0.65)
+  }
+
+/* modal */
+.modal-enter {
+  top: 0px;
+  opacity: 0;
+}
+.modal-enter.modal-enter-active {
+  top: 0px;
+  opacity: 1;
+}
+.modal-leave {
+  top: 0px;
+  opacity: 1;
+}
+.modal-leave.modal-leave-active {
+  top: 0px;
+  opacity: 0;
+}
+.transition, .transition div{
+  /*transition: all 0.2s;*/
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.trans-slow{
+  transition: all 2000ms;
+}
+.trans{
+  transition: all 300ms;
+}
+
+.transi-slow, .transi-slow div{
+  /*transition: all 0.2s;*/
+  transition: all 1s Ease-out;
+  -webkit-transition: all 1s Ease-out;
+  -moz-transition: all 1s Ease-out;
+  -o-transition: all 1s Ease-out;
+}
+
+
+/*action sheet*/
+
+.actionSheet-bottomenter{
+  bottom: 0%;
+}
+
+.actionSheet-bottomleave{
+  bottom: -100% !important;
+}
+
+
+.actionSheet-topenter{
+  top: 0%;
+}
+
+.actionSheet-topleave{
+  top: -100% !important;
+}
+
+
+.popselect-enter{
+  bottom: 0% !important;
+}
+
+.popselect-leave{
+  bottom: -100% !important;
+}
+
+.btn-raised{
+  -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}

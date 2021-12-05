@@ -1,0 +1,29 @@
+{
+    "status": 0,
+    "errNo": 0,
+    "msg": "请求成功",
+    "errMsg": "请求成功",
+    "data": [
+        {
+            "name": "华侨城",
+            "city_name": "深圳",
+            "mwindex": 0,
+            "mwindex_rate": "-"
+        },
+        {
+            "name": "湖里万达",
+            "city_name": "厦门",
+            "mwindex": 0,
+            "mwindex_rate": "+22.84"
+        },
+        {
+            "name": "湖里万达",
+            "city_name": "厦门",
+            "mwindex": 0,
+            "mwindex_rate": "-22.84"
+        }
+    ],
+    "requestId": "ef306864-5b9c-4731-90dd-38c88226291a",
+    "startTime": 1515153776398,
+    "costTime": 147
+}

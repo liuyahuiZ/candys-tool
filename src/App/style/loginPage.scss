@@ -1,0 +1,32 @@
+.login-form {
+  .lf-ipt {
+    height: 2.2rem;
+    line-height: 2.2rem;
+    border-radius: 2rem;
+    &:hover {
+      background-color: #EEE;
+    }
+    &:focus-within {
+      border: 1px solid #51b0d6;
+    } 
+  }
+}
+
+.landing-logo-l {
+  display: none;
+}
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .landing-logo-l {
+    display: block;
+    width: 30.66%;
+    background: url('https://rwd.oss-cn-hangzhou.aliyuncs.com/newCandys/Login_LL.png') no-repeat;
+    background-size: 100%;
+  }
+  .landing-logo-r {
+    display: block;
+    width: 30.66%;
+    background: url('https://rwd.oss-cn-hangzhou.aliyuncs.com/newCandys/Login_RR.png') no-repeat;
+    background-size: 100%;
+  }
+}

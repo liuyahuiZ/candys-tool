@@ -1,0 +1,101 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=UTF-8>
+  <meta name=apple-mobile-web-app-capable content=yes>
+  <meta name=apple-mobile-web-app-status-bar-style content=black>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href=./css/cssbundle.css rel=stylesheet></head>
+  <link rel="icon" href="https://m-mymove.oss-cn-shanghai.aliyuncs.com/logo_b.png" type="image/x-icon">
+  <title>Candys Manage</title>
+</head>
+<body class="scroller-body">
+  <div class='scrollcontents' id=root></div>
+  <div style='display: none;' id='bro_notice'>
+  <div class='bd' >
+    您使用的浏览器版本较低，为了更好地使用体验请根据提示进行操作：
+    <ul>
+      <li>如果您有Google Chrome或Firefox浏览器请使用以上浏览器访问</li>
+      <li>如果您没有以上浏览器请<a href='https://www.google.cn/intl/zh-CN/chrome/' target='_blank'>前往下载></li>
+      <li>如果您使用了QQ、360或搜狗浏览器，请点击地址栏最右侧小按钮切换为极速模式</li>
+    </ul>
+    <div class='ft'>
+      <button id='bro_notice_close' text="关闭" type="button" class="ant-btn ant-btn-primary" ><span>关闭</span></button>
+    </div>
+  </div>
+</div>
+  <script type=text/javascript>
+    function checkBrowser() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    console.log(userAgent);
+    const broNotice = document.getElementById('bro_notice');
+    const isIE = userAgent.indexOf("trident") > -1
+            || userAgent.indexOf("msie") > -1;
+    const isEdge = userAgent.indexOf("edge") > -1;
+    if (isIE || isEdge) {
+      broNotice.style.setProperty('display', 'block');
+    }
+    document.getElementById('bro_notice_close').onclick = function() {
+      broNotice.style.setProperty('display', 'none');
+    }
+  }
+  checkBrowser();
+  </script>
+  <script type=text/javascript src=./app.bundle.js></script>
+  <script>
+    document.addEventListener('touchstart',function (event) { 
+      if(event.touches.length>1){ 
+        event.preventDefault(); 
+      } 
+    });
+    var lastTouchEnd=0; 
+    document.addEventListener('touchend',function (event) { 
+      var now=(new Date()).getTime(); 
+      if(now-lastTouchEnd<=300){ 
+        event.preventDefault(); 
+      } 
+      lastTouchEnd=now; 
+    },false);
+
+    var overscroll = function(el) {  
+      el.addEventListener('touchstart', function() {  
+        var top = el.scrollTop  
+          , totalScroll = el.scrollHeight  
+          , currentScroll = top + el.offsetHeight;  
+        //If we're at the top or the bottom of the containers  
+        //scroll, push up or down one pixel.  
+        //  
+        //this prevents the scroll from "passing through" to  
+        //the body.  
+        if(top === 0) {  
+          el.scrollTop = 1;  
+        } else if(currentScroll === totalScroll) {  
+          el.scrollTop = top - 1;  
+        }  
+      });  
+      el.addEventListener('touchmove', function(evt) {  
+        //if the content is actually scrollable, i.e. the content is long enough  
+        //that scrolling can occur  
+        if(el.offsetHeight < el.scrollHeight)  
+          evt._isScroller = true;  
+      });  
+    }  
+    overscroll(document.querySelector('.scrollcontents'));  
+    // document.body.addEventListener('touchmove', function(evt) {  
+    //   if(!evt._isScroller) {  
+    //     evt.preventDefault();  
+    //   }  
+    // });
+    window.addEventListener('message', function(e) {
+        if(e.origin!==location.origin){
+          // console.log(e, location);
+          // console.log('data', e.data)
+          let data = e.data;
+          localStorage.token = data.token
+        }
+        
+    })
+  </script>
+</body>
+</html>
