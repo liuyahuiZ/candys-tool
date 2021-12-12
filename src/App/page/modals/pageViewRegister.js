@@ -9,6 +9,8 @@ const GridLayoutPageView = React.lazy(() => import('./gridLayoutPageView'));
 const EditTableView = React.lazy(() => import('./editTableView'));
 const AddPage = React.lazy(() => import('./addPageView'));
 const CardsPage = React.lazy(() => import('./cardsPageView'));
+const TextPicPageView = React.lazy(() => import('./cards/textPicPageView'));
+const VideoPageView = React.lazy(() => import('./cards/videoPageView'));
 
 export default {
     Edit: EditPageView,
@@ -20,5 +22,7 @@ export default {
     GridLayout: GridLayoutPageView,
     EditTable: EditTableView,
     AddPage: AddPage,
-    CardsPage: CardsPage
+    CardsPage: CardsPage,
+    TextPicPage: TextPicPageView,
+    VideoPage: VideoPageView,
 }

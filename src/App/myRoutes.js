@@ -15,6 +15,12 @@ const  ProjectManage = (location, cb) => {
   },'ProjectManage')
 };
 
+const  CardManage = (location, cb) => {
+  require.ensure([], require => {
+      cb(null, require('./page/cardManage').default)
+  },'CardManage')
+};
+
 const  ProjectView = (location, cb) => {
   require.ensure([], require => {
       cb(null, require('./page/projectView').default)
@@ -52,6 +58,7 @@ class MyRoutes extends Component{
         <Route path={'Home'} component={Home} />
         <Route path={'Projects'} getComponent={Projects} />
         <Route path={'ProjectManage'} getComponent={ProjectManage} />
+        <Route path={'CardManage'} getComponent={CardManage} />
         <Route path={'ProjectView'} getComponent={ProjectView} />
         <Route path={'NoAuthor'} getComponent={NoAuthor} />
         <Route path={'LoginPage'} getComponent={LoginPage} />

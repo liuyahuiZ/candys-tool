@@ -8,6 +8,8 @@ import TabLayout from "./editModals/tabLayout";
 import GridLayout from "./editModals/gridLayout";
 import AddPage from "./editModals/addPage";
 import CardsPage from "./editModals/cardsPage";
+import TextPicPage from "./editModals/cardModals/textPicPage";
+import VideoPage from "./editModals/cardModals/videoPage";
 
 export default {
     Edit: EditPage,
@@ -19,5 +21,7 @@ export default {
     TabLayout: TabLayout,
     GridLayout: GridLayout,
     AddPage: AddPage,
-    CardsPage: CardsPage
+    CardsPage: CardsPage,
+    TextPicPage: TextPicPage,
+    VideoPage: VideoPage,
 }

@@ -183,7 +183,9 @@ class ShowView extends Component {
             }
         }
         if(selectTree){
+            console.log('selectTree === ', selectTree);
             const PageComponents = PageViewRegister.default[selectTree]
+            console.log('PageViewRegister === ', PageViewRegister.default);
             if(PageComponents){
                 return <React.Suspense fallback={<LoadPage />}>
                     <PageComponents pageData={pagesInfo} pageList={pageList} pageParmes={selectPageParmes} ref={(r) => { self[`$$${selectTree}`] = r; }}  pageConfig={pageConfig} valueBack={valueBack} defaultAction={defaultAction} loadingStatus={loadingStatus} {...defaultAction} {...this.props}  />

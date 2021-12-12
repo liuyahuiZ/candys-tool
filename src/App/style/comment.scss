@@ -270,4 +270,11 @@ input:-webkit-autofill {
     background-image: none;
     transition: background-color 50000s ease-in-out 0s;
 }
-
+.phone-container{
+    width: 375px;
+    height: 667px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 20px;
+    background: #fff;
+}

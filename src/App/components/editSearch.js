@@ -113,6 +113,13 @@ class EditSearch extends Component {
                                 self.setKey('options', itm)
                     }} />
                     </Col></Row></Col>: ''}
+                    {!obg.hasRequest ? <Col><Row>
+                    <Col span="8" className="line-height-3r">options样式: </Col>
+                    <Col span="16">
+                    <Options datas={eval(obg.optionsStyle)} onChange={(itm)=>{
+                        self.setKey('optionsStyle', itm)
+                    }} />
+                    </Col></Row></Col>: ''}
         </Row>);
 
         const selectDom = (<Row>

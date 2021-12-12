@@ -32,8 +32,7 @@ class Projects extends Component {
       };
       this.featureTypes = [
           {text: 'NORMAL', value: ''},
-          {text: 'NEW', value: 'new'},
-          {text: 'HOT', value: 'hot'},
+          {text: 'CARD', value: 'Card'},
           {text: 'TOP', value: 'top'},
       ];
     }
@@ -389,7 +388,11 @@ class Projects extends Component {
                     </Col>
                                     
                     <Col span={4.5} className={'cursor-pointer text-align-left'} title={'编辑'} onClick={()=>{
-                        this.handleClick('/ProjectManage', {id: itm._id})
+                        if(itm.feature === 'Card') {
+                            this.handleClick('/CardManage', {id: itm._id})
+                        } else {
+                            this.handleClick('/ProjectManage', {id: itm._id})
+                        }
                     }}>
                         <Icon iconName={'android-create  '} size={'150%'} iconColor={'#5D8EFF'}  />
                                      

@@ -48,6 +48,8 @@ import PageTransition from './PageTransition';
 import List from './List';
 import Image from './Image';
 import ImageArr from './ImageArr';
+import Video from './Video';
+import Audio from './Video/audio';
 import Item from './List/item';
 import Search from './Search';
 import Searchs from './Search/search';
@@ -118,6 +120,8 @@ export {
   Icon,
   Image,
   ImageArr,
+  Video,
+  Audio,
   LabelGroup,
   Label,
   Tree,

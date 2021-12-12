@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CommonCheckbox from './box';
 import styles from './style';
+import * as arrayUtils from '../../utils/array';
 
 class Radio extends Component {
   constructor(props) {
@@ -10,14 +11,16 @@ class Radio extends Component {
       value: '',
       text: '',
       checked: false,
-      options: this.props.options
+      options: this.props.options,
+      optionsStyle: this.props.optionsStyle,
     };
     this.getValue = this.getValue.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
   componentWillReceiveProps(nextProps) {
     this.setState({
-      options: nextProps.options
+      options: nextProps.options,
+      optionsStyle: nextProps.optionsStyle
     });
   }
   getValue() {
@@ -46,10 +49,10 @@ class Radio extends Component {
     this.props.onChange(event, item);
   }
   render() {
-    const { disabled, style } = this.props;
+    const { disabled, style, optionsStyle } = this.props;
     const { options } = this.state;
     const containerStyle = Object.assign({}, styles.container, style);
-
+    const contStyle = arrayUtils.arrToObg(optionsStyle, 'text', 'value')
     // const name = Base.genRandomId();
     const self = this;
     const compon = options.map((item, idex) => {
@@ -64,6 +67,7 @@ class Radio extends Component {
         checked={isChecked}
         value={item.value}
         text={item.text}
+        style={contStyle}
       />);
     });
 
