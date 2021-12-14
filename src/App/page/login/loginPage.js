@@ -41,10 +41,11 @@ class LoginPage extends Component {
     // {tabName: 'second', content:(<div className='logo-computer'></div>), isActive: false}]
         return (<section className=" heighth-100 overflow-hide">
             <Row className="heighth-100" justify={'center'} content={'center'} align={'center'}>
-                <Col span={14} className="bg-2F3346 heighth-100 relative ">
+                <Col span={14} className="heighth-100 relative login-left-content bg-C0DDFE">
                     <Carousel options={carouselMap} height={100} showDotsText={false} autoPlay dragAble>
-                    </Carousel></Col>
-                <Col span={10}>
+                    </Carousel>
+                </Col>
+                <Col span={10} className="login-right-content">
                     <Row justify={'center'} content={'center'} align={'center'}>
                         <Col span={19} style={{maxWidth: '380px'}}><BindUser isLogin /></Col>
                     </Row>

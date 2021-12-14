@@ -25,7 +25,14 @@ body{
     height: 80%;
     // background: url('../../assect/computer.png') no-repeat;
     // background-size: 100%;
-    border-radius: 50% 12%;
+    border-radius: 70% 70% 5% 5%;
+}
+.login-left-content{
+    border-radius: 0% 0% 70% 0%;
+    overflow: hidden;
+}
+.login-right-content{
+    border-radius: 30% 0% 0% 0%;
 }
 .doc{ padding: 0.5rem;}
 .doc h2{font-size: 25px;color: #333;font-weight: 400;
