@@ -4,7 +4,7 @@ export default {
     // headerTextActiveColor: 'textcolor-4698F9',
     // headerBorderColor: 'border-color-161827',
     // headerIconColor: '',
-    headerBg: 'bg-2F3346',
+    headerBg: 'bg-3a3a40',
     headerTextColor: 'textclolor-white',
     headerTextActiveColor: 'textcolor-eee',
     headerBorderColor: 'border-color-161827',

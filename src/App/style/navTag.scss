@@ -43,7 +43,7 @@
         transform: translate(60%, 4%)
       }
       &:hover {
-        background: rgb(69, 71, 85);
+        background: #6B6B76;
         color: #eee;
         .cnt-close {
           visibility:visible;
@@ -53,9 +53,9 @@
     .active-style {
       // background: rgb(106, 157, 245);
       // font-size: 14px;
-      box-shadow: 0 0 3px rgb(69, 71, 85);
+      box-shadow: 0 0 3px #6B6B76;
       color: #eee;
-      background: rgb(69, 71, 85);
+      background: #6B6B76;
       .cnt-close {
         visibility:visible;
       }

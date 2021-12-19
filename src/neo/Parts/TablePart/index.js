@@ -303,7 +303,7 @@ export default class TablePart extends Component {
         columnNumber={1}
         colspan={itemFormat.length + 1}
       >
-        <Icon iconName={'android-clipboard'} style={{color: 'rgb(106, 157, 245)', fontSize: '4em'}} />
+        <Icon iconName={'android-clipboard'} style={{color: '#5253cc', fontSize: '4em'}} />
         <div style={{margin: '0 0 16px 0'}}>暂无数据</div>
       </TableRowColumn>
     </TableRow>) ;

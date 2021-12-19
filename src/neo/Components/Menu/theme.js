@@ -17,13 +17,13 @@ export default {
     ulBg: '#fff',
     subUlBg: '#fff',
     fontDefalutColor: '#666',
-    fontActiveColor: '#2979FF',
+    fontActiveColor: '#5253cc',
     iconDefalutColor: '#666',
-    iconActiveColor: '#2979FF',
-    itemActiveBg: '#ECEEFD',
+    iconActiveColor: '#5253cc',
+    itemActiveBg: '#EFEFFA',
     ulborder: '1px solid #f5f5f5',
     subUlBorder: '1px solid #f5f5f5',
-    borderRight: '3px solid #2979FF',
+    borderRight: '3px solid #5253cc',
     BoxShadow: ''
   }
 };

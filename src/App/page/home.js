@@ -233,13 +233,13 @@ class Home extends Component {
                         <Col className={`${!collapsedStatus && 'heighr-4'} absolute bottom-0`}>
                             <Row className="bg-show zindex-10 width-100  border-top border-color-f5f5f5">
                                 <Col span={collapsedStatus ? 24 : 4} className="padding-top-1r text-align-center cursor-pointer" onClick={()=>{self.toggole()}}>
-                                    <Icon iconName={collapsedStatus ? 'ios-list-outline': 'ios-list'} size={'140%'} iconColor={'#5D8EFF'}  />
+                                    <Icon iconName={collapsedStatus ? 'ios-list-outline': 'ios-list'} size={'140%'} iconColor={'#5253cc'}  />
                                 </Col>
                                 <Col span={collapsedStatus ? 24 : 4} className="padding-top-1r text-align-center cursor-pointer"><FullScreen showDes={false} /></Col>
                                 <Col span={collapsedStatus ? 24 : 16} className="padding-top-1r text-align-center cursor-pointer" onClick={()=>{
                                         goLink('/Projects')
                                     }}>
-                                    <Icon iconName={'android-settings '} size={'140%'} iconColor={'#5D8EFF'}  /> {collapsedStatus? '' : '编辑模式'}
+                                    <Icon iconName={'android-settings '} size={'140%'} iconColor={'#5253cc'}  /> {collapsedStatus? '' : '编辑模式'}
                                 </Col>
                             </Row>
                         </Col>

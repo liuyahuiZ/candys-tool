@@ -1,9 +1,9 @@
 export default {
-  primary: '#2979FF',
+  primary: '#5253cc',
   primaryRgb: '93, 142, 255',
-  success: '#68CE45',
-  warning: '#f7ba2a',
-  error: '#ff4949',
+  success: '#9bc53d',
+  warning: '#fde74c',
+  error: '#c3423f',
   info: '#50BFFF',
 
   white: '#fff',

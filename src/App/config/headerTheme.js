@@ -1,5 +1,5 @@
 export default {
-    headerBg: 'bg-2F3346',
+    headerBg: 'bg-3a3a40',
     headerTextColor: 'textclolor-white',
     headerTextActiveColor: 'textcolor-eee',
     headerBorderColor: 'border-color-161827',
