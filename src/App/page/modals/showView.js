@@ -201,7 +201,7 @@ class ShowView extends Component {
         const { selectTree } = this.state;
 
         return(
-          <section className="width-100">
+          <section className="width-100 show-view">
             <ErrorBounDary >{self.renderTemple(selectTree)} </ErrorBounDary>
           </section>
         );

@@ -285,3 +285,11 @@ input:-webkit-autofill {
     border-radius: 20px;
     background: #fff;
 }
+
+.card-item{
+    display: flex;
+    height: 100vh;
+    .show-view{
+        height: 100%;
+    }
+}

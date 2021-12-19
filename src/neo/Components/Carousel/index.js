@@ -169,7 +169,7 @@ class Carousel extends Component {
     this.setState({ options: arr });
   }
   render() {
-    const { showDots, showHeight, containerStyle,dotDefaultStyle, dotActiveStyle } = this.props;
+    const { showDots, showHeight, containerStyle,dotDefaultStyle, dotActiveStyle, haderStyle } = this.props;
     const { tabContentStyle } = this.state;
     const containerHead = styles.containerHead;
     const height = showHeight ? { height: `${this.state.height}vh` } : '';
@@ -205,7 +205,7 @@ class Carousel extends Component {
     return (
       <div className="carousel-container" ref={(r) => { this.$$container = r; }} style={arrayUtils.merge([styles.container, containerStyle])}>
         <div
-          style={arrayUtils.merge([containerHead, itmWidth])}
+          style={arrayUtils.merge([containerHead, itmWidth, haderStyle])}
           ref={(r) => { this.$$tabHeader = r; }}
         >
           {tabHeader}

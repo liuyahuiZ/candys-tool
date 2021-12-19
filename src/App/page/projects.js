@@ -399,7 +399,11 @@ class Projects extends Component {
                     </Col>
                     
                     <Col span={4.5} className={'cursor-pointer text-align-left'} title={'预览'} onClick={()=>{
-                        this.handleClick('/ProjectView', {id: itm._id})
+                        if(itm.feature === 'Card') {
+                            this.handleClick('/CardView', {id: itm._id})
+                        } else {
+                            this.handleClick('/ProjectView', {id: itm._id})
+                        }
                     }}>
                         <Icon iconName={'android-list  '} size={'150%'} iconColor={'#68CE45'}  />
                     </Col>

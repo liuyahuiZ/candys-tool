@@ -277,24 +277,14 @@ class BindUser extends Component {
             </Row>
           </Col>
           <Col className="text-align-right margin-top-1r">
-            <Buttons
-              text={'registor'}
-              size={'small'}
-              type={'link'}            
-              onClick={() => {
+            <span className="textclolor-666 font-size-14" onClick={() => {
                 this.showModal();
-              }}
-            />
-            <Buttons
-              text={'forget Password'}
-              size={'small'}
-              type={'link'}            
-              onClick={() => {
+              }}>registor</span>
+            {/* <span className="textclolor-666 font-size-14 margin-left-3" onClick={() => {
                 this.setState({
                   showReset:false
                 })
-              }}
-            />
+              }}>forget Password</span> */}
           </Col>
           <Col className="margin-top-2r" >
             <Buttons
