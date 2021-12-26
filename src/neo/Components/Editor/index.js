@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import wangEditor from 'wangEditor';
+import WE from 'wangeditor';
 
 class Editor extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Editor extends Component {
       focus: false
     };
     this.getValue = this.getValue.bind(this);
-    this.editor = new wangEditor('#wangEditor') 
+    this.editor = null;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -28,6 +28,7 @@ class Editor extends Component {
 
   componentDidMount(){
      // 两个参数也可以传入 elem 对象，class 选择器
+     this.editor = new WE('#editor') 
      this.editor.create()
      const self = this;
      const {value} = this.state;
@@ -49,7 +50,7 @@ class Editor extends Component {
 
   render() {
     return (
-      <div id="wangEditor">
+      <div id="editor">
       </div>
     );
   }

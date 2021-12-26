@@ -21,7 +21,7 @@ export default {
     iconDefalutColor: '#666',
     iconActiveColor: '#5253cc',
     itemActiveBg: '#EFEFFA',
-    ulborder: '1px solid #f5f5f5',
+    ulborder: '',
     subUlBorder: '1px solid #f5f5f5',
     borderRight: '3px solid #5253cc',
     BoxShadow: ''

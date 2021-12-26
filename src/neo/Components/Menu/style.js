@@ -4,14 +4,14 @@ export default {
     padding: '0px',
     backgroundColor: '#404040',
     width: '100%',
-    margin: '0'
+    margin: '0 auto'
   },
   ul: {
     listStyle: 'none',
     padding: '0px',
     backgroundColor: '#404040',
     zIndex: 10,
-    margin: '0'
+    margin: '0 auto'
   },
   li: {
     padding: '1px',

@@ -201,7 +201,7 @@ class Home extends Component {
         return(
           <section className="bg-f5f5f5  ">
             <Row className="">
-                <Col span={collapsedStatus? 1 : 4} style={collapsedStatus? {width: '50px'}: {}} 
+                <Col span={collapsedStatus? 1 : 4} style={collapsedStatus? {width: '80px'}: {}} 
                 className={`bg-show heighth-100 relative`}>
                     <Row className={`${Theme.headerBg} textclolor-white heighr-3 border-bottom ${Theme.headerBorderColor}  ${collapsedStatus ? '' : 'padding-left-1r'}`}>
                         <Col className={`${collapsedStatus ? `text-align-center ` : ''} line-height-3r`}>
