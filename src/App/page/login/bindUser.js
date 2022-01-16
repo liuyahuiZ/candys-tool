@@ -2,7 +2,8 @@ import React , { Component }from 'react';
 import { Components, utils } from 'neo';
 import { login, userLogin } from '../../api/index'
 import PublicKey from '../../config/publishKey';
-import { goLink, setCache  } from '../../utils/common';
+import { goLink, setCache, getUserInfo } from '../../utils/common';
+import { setCookie  } from '../../utils/cookieSet';
 import Hex from '../../utils/Hex';
 import SM2 from '../../utils/sm2';
 import Registor from './registorUser';
@@ -30,7 +31,7 @@ class BindUser extends Component {
       RESaction: '',
       oldPwd:'',
       newPwd:'',
-      userInfo: sessions.getStorage('userInfo') || {}, //storage.getStorage('bindUserInfo')
+      userInfo: getUserInfo() || {}, //storage.getStorage('bindUserInfo')
       showReset:false,
       showForget:false,
       showRegistor: false,
@@ -121,7 +122,6 @@ class BindUser extends Component {
           LoadSatus: 'LOADED'
         })
         // storage.setStorage('userInfo', res.data);
-
         setCache(res.data);
         // sessions.setStorage('token', res.data.token);
         // localStorage.token = res.data.token

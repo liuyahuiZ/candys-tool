@@ -5,7 +5,7 @@ import { getProjects, addProject, deleteProject, modifyProject , downLoadProject
 import SelectIcon from '../components/selectIcon';
 import ImportBord from './components/importBord';
 import ExportBord from './components/exportBord';
-import { goLink } from '../utils/common';
+import { goLink, getUserInfo } from '../utils/common';
 const { Row, Col, Icon, Modal, Input, Selects , Textarea, Toaster, Loader, Checkbox, AnTransition , Radio , ExModal , Buttons ,FileUpWithData, LoadPage} = Components;
 const { sessions, storage } = utils;
 class Projects extends Component {
@@ -16,7 +16,7 @@ class Projects extends Component {
           projectList: [],
           name: '',
           nowProject: {},
-          userInfo: sessions.getStorage('userInfo') || {},
+          userInfo: getUserInfo()|| {},
           pageList:[], //导出获取子页面
           exportType:'0',//导出方式
           pageStr:'',//导出页面string

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Components, utils } from 'neo';
-import { goLink } from '../../utils/common';
+import { goLink, getUserInfo } from '../../utils/common';
 import { resetPasswd } from '../../api/index'
 import PublicKey from '../../config/publishKey';
 import Hex from '../../utils/Hex';
@@ -26,7 +26,7 @@ class ResetPwd extends Component {
             pwdFlag: 0,
             oldPwd: '',
             newPwd: '',
-            userInfo: sessions.getStorage('userInfo') || {},
+            userInfo: getUserInfo() || {},
             outPage:false,
             oldEye:false,
             newEye:false,

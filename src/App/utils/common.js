@@ -4,6 +4,7 @@ import { utils } from 'neo';
 import Hex from './Hex';
 import SM2 from './sm2';
 import PublicKey from '../config/publishKey';
+import { setCookie, getCookie, clearCookie } from './cookieSet'
 
 const { storage, sessions } = utils;
 
@@ -36,8 +37,13 @@ export function goLink(link, itm){
     }
 }
 
+export function getUserInfo() {
+    const userInfo = sessions.getStorage('userInfo') || JSON.parse(getCookie('userInfo'));
+    return userInfo;
+}
 export function checkAdminUser(pathname, callBack){
-  const userInfo = sessions.getStorage('userInfo')
+  const userInfo = sessions.getStorage('userInfo') || getCookie('userInfo');
+  const token = getCookie('token');
   if(pathname !== '/LoginPage') {
     if(!userInfo||(JSON.stringify(userInfo)==='{}')){
         location.hash="/LoginPage"
@@ -55,6 +61,10 @@ export function checkAdminUser(pathname, callBack){
         location.hash="/404"
         return false
     }
+  } else {
+    if(token) {
+        location.hash = "/Home";
+    }
   }
 }
 
@@ -62,8 +72,15 @@ export function setCache(data){
     sessions.setStorage('caches', data)
     sessions.setStorage('userInfo', data)
     sessions.setStorage('token', data.token)
+    setCookie('token', data.token);
+    setCookie('userInfo', JSON.stringify(data));
 }
 
+export function clearCache() {
+    storage.removeAllStorage();
+    sessions.removeAllStorage();
+    clearCookie();
+}
 export function sm2encrypt(str){
     const publicKey = PublicKey.PUBLISH_KEY
     const sm2DataHex = Hex.utf8StrToHex(str)

@@ -5,6 +5,7 @@ import { getProjectInfo, getProjectPages, addProjectPages, copyProjectPages, mod
 import ShowView from './modals/showView';
 import SelectIcon from '../components/selectIcon';
 import { UrlSearch } from '../utils/index';
+import { getUserInfo  } from '../utils/common';
 import { ListContext } from  'context';
 import * as ModalRegister from './modalRegister';
 import * as Register from '../../views/register';
@@ -36,7 +37,7 @@ class ProjectManage extends Component {
         pageConfig: {},
         loadingStatus: 'LOADING', //'LOADING', 'LOADED',
         editThePage: {},
-        userInfo: sessions.getStorage('userInfo') || {},
+        userInfo: getUserInfo() || {},
         nowSelectPage: sessions.getStorage('nowSelectPage') || null,
         listBarStatus: 'HIDE', //'SHOW', 'HIDE'
         modalTplList: [{text: '详情页模板', value: 'Detail'},{text: '详情页Uper模板', value: 'DetailRich'},

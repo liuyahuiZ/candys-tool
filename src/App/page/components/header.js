@@ -1,6 +1,6 @@
 import React , { Component }from 'react';
 import { Components, utils } from 'neo';
-import { goLink } from '../../utils/common'
+import { goLink, clearCache } from '../../utils/common'
 import Theme from '../../config/headerTheme';
 import ResetPwd from '../login/resetPwd';
 import NavTab from './navTag';
@@ -63,8 +63,7 @@ class Header extends Component {
           },
           (id, callback) => {
             callback(id)
-            storage.removeAllStorage()
-            sessions.removeAllStorage()
+            clearCache();
             goLink('/LoginPage')
           },
           (id, callback) => {

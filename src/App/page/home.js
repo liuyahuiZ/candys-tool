@@ -2,7 +2,7 @@ import React , { Component }from 'react';
 import { Components, utils } from 'neo';
 import { hashHistory } from 'react-router';
 import { projectQuery } from '../api/index';
-import { goLink } from '../utils/common';
+import { goLink, getUserInfo } from '../utils/common';
 import ProjectShowView from './projectShowView';
 import { Provider,KeepAlive } from 'react-keep-alive';
 import Header from './components/header';
@@ -23,7 +23,7 @@ class Home extends Component {
           nowPageId: '',
           nowProject: {},
           loadStatus: 'LOADING', //'LOADING', 'ERROR', 'SUCCESS',
-          userInfo: sessions.getStorage('userInfo') || {}, //storage.getStorage('bindUserInfo')
+          userInfo: getUserInfo() || {}, //storage.getStorage('bindUserInfo')
           homePage: { _id: 'dashBord', projectIcon: 'android-apps ', templateId: 'dashBord', isDIYPage: true, url: '@Home', title: '首页'},
           collapsedStatus: false,
           selectKey: {

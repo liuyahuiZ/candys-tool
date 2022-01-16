@@ -2,7 +2,7 @@ import React , { Component }from 'react';
 import { Components, utils } from 'neo';
 import { login, register } from '../../api/index'
 import PublicKey from '../../config/publishKey';
-import { goLink, setCache  } from '../../utils/common';
+import { goLink, setCache, getUserInfo  } from '../../utils/common';
 import Hex from '../../utils/Hex';
 import SM2 from '../../utils/sm2';
 
@@ -31,7 +31,7 @@ class BindUser extends Component {
       oldPwd:'',
       newPwd:'',
       phone: '',
-      userInfo: sessions.getStorage('userInfo') || {}, //storage.getStorage('bindUserInfo')
+      userInfo: getUserInfo() || {}, //storage.getStorage('bindUserInfo')
       showReset:false,
       showForget:false,
       newEye:false
